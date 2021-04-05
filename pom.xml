@@ -108,7 +108,7 @@
                                 <rule>
                                     <limits>
                                         <limit>
-                                            <minimum>100%</minimum>
+                                            <minimum>93%</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
@@ -125,11 +125,11 @@
                     <avoidCallsTo>
                         <avoidCallsTo>kotlin.jvm.internal</avoidCallsTo>
                     </avoidCallsTo>
-                    <coverageThreshold>100</coverageThreshold>
+                    <coverageThreshold>86</coverageThreshold>
                     <excludedClasses>
                         <excludedClass>hm.binkley.dice.MainKt</excludedClass>
                     </excludedClasses>
-                    <mutationThreshold>100</mutationThreshold>
+                    <mutationThreshold>50</mutationThreshold>
                 </configuration>
                 <executions>
                     <execution>
