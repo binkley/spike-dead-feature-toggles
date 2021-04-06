@@ -7,6 +7,6 @@ import org.junit.jupiter.api.Test
 internal class FooTest {
     @Test
     fun `should have feature A`() {
-        assertEquals("Apple", Foo("A").nifty())
+        assertEquals("Apple", Foo("featureA").nifty())
     }
 }
