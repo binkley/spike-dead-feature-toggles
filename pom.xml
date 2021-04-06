@@ -114,7 +114,7 @@
                                 <rule>
                                     <limits>
                                         <limit>
-                                            <minimum>78%</minimum>
+                                            <minimum>75%</minimum>
                                         </limit>
                                     </limits>
                                 </rule>

@@ -1,9 +1,11 @@
 package hm.binkley.labs
 
-class Foo(featureA: String, toggles: List<String>) {
+private const val extraCoolToggle = "now-with-more-cool"
+
+class Foo(toggles: List<String>) {
     private val cool =
-        if (toggles.contains(featureA)) coolA()
-        else coolB()
+        if (toggles.contains(extraCoolToggle)) extraCool()
+        else defaultCool()
 
     fun nifty() = cool.nifty()
 }
@@ -12,6 +14,6 @@ private fun interface Cool {
     fun nifty(): String
 }
 
-private fun coolA() = Cool { "Apple" }
+private fun extraCool() = Cool { "Apple" }
 
-private fun coolB() = Cool { "Banana" }
+private fun defaultCool() = Cool { "Banana" }
