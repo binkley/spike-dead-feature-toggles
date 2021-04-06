@@ -1,10 +1,8 @@
 package hm.binkley.labs
 
-import java.util.Properties
-
-class Foo(featureA: String) {
+class Foo(featureA: String, toggles: List<String>) {
     private val cool =
-        if (isEnabled(featureA)) coolA()
+        if (toggles.contains(featureA)) coolA()
         else coolB()
 
     fun nifty() = cool.nifty()
@@ -17,7 +15,3 @@ private fun interface Cool {
 private fun coolA() = Cool { "Apple" }
 
 private fun coolB() = Cool { "Banana" }
-
-private fun isEnabled(toggle: String) = Properties().apply {
-    load(Foo::class.java.getResourceAsStream("/foo.properties"))
-}.getProperty(toggle).toBoolean()
