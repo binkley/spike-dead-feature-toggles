@@ -1,6 +1,6 @@
 package hm.binkley.labs
 
-private const val extraCoolToggle = "now-with-more-cool"
+private const val extraCoolToggle = "featureA"
 
 class Foo(toggles: List<String>) {
     private val cool =
