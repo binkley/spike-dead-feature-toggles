@@ -72,10 +72,9 @@ typical example is `main()`  In the JVM world, JaCoCo is the coverage tool of
 choice, and it understands the `@lombok.Generated` annotation to mean: ignore
 this code for coverage. Use this power **sparingly**.
 
-<img src="images/jacoco-report.png" alt="JaCoCo coverage report"
-align="right"/>
-
 ### Reading the coverage report
+
+![JaCoCo coverage report](./images/jacoco-report.png)
 
 Four things to observe:
 
