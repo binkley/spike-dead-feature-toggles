@@ -34,7 +34,8 @@ $ ./mvnw clean verify -Dtoggles=
 
 ### Example 1 &mdash; full coverage
 
-If you have 100% code coverage, any new unused code fails the build.
+If you have 100% code coverage, any new unused code fails the build. Existing
+dead would have already been removed to reach 100%.
 
 ### Example 2 &mdash; refactoring away covered code
 
@@ -65,3 +66,8 @@ this code for coverage. Use this power **sparingly**.
 Feature toggles intentionally create dead code. In typical development,
 features accumulate over time, and few are removed. However, when needing
 removal it is difficult to find all impacted code without coverage. Good luck.
+
+Perhaps more important is to _remove toggles_ for code that becomes 
+permanent.  In this spike, you can disable a toggle from the command line 
+during build, and see tests fail.  Remove the toggle from the production 
+code, and see the test pass again.
