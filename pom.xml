@@ -116,7 +116,7 @@
                                 <rule>
                                     <limits>
                                         <limit>
-                                            <minimum>78%</minimum>
+                                            <minimum>100%</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
@@ -133,8 +133,9 @@
                     <avoidCallsTo>
                         <avoidCallsTo>kotlin.jvm.internal</avoidCallsTo>
                     </avoidCallsTo>
-                    <coverageThreshold>75</coverageThreshold>
-                    <mutationThreshold>44</mutationThreshold>
+                    <coverageThreshold>100</coverageThreshold>
+                    <mutationThreshold>100</mutationThreshold>
+                    <timestampedReports>false</timestampedReports>
                 </configuration>
                 <executions>
                     <execution>
