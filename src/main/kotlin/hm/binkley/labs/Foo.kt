@@ -9,10 +9,10 @@ class Foo(private val toggles: List<String>) {
         if (toggles.contains(extraCoolToggle)) extraCool()
         else defaultCool()
 
-    /** Example of uncovered code. */
+    /** Example of covered code. */
     private fun extraCool() = "Apple"
 
-    /** Example of covered code. */
+    /** Example of uncovered code. */
     private fun defaultCool() = "Banana"
 
     /** Example of dead code ignored by coverage: Be _extra careful_. */
