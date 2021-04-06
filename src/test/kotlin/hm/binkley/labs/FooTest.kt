@@ -7,9 +7,9 @@ private var toggles = System.getProperty("toggles", "").split(",")
 
 internal class FooTest {
     @Test
-    fun `should use B when toggle A disabled`() {
-        val fooWithADisabled = Foo(toggles)
+    fun `should not use disabled feature toggle`() {
+        val fooWithExtraCool = Foo(toggles)
 
-        assertEquals("Banana", fooWithADisabled.nifty())
+        assertEquals("Banana", fooWithExtraCool.nifty())
     }
 }

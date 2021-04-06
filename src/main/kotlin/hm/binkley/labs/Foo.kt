@@ -1,19 +1,21 @@
 package hm.binkley.labs
 
-private const val extraCoolToggle = "featureA"
+import lombok.Generated
 
-class Foo(toggles: List<String>) {
-    private val cool =
+class Foo(private val toggles: List<String>) {
+    private val extraCoolToggle = "extraCool"
+
+    fun nifty() =
         if (toggles.contains(extraCoolToggle)) extraCool()
         else defaultCool()
 
-    fun nifty() = cool.nifty()
+    /** Example of uncovered code. */
+    private fun extraCool() = "Apple"
+
+    /** Example of covered code. */
+    private fun defaultCool() = "Banana"
+
+    /** Example of dead code ignored by coverage: Be _extra careful_. */
+    @Generated
+    private fun notCool() = "Crocodile"
 }
-
-private fun interface Cool {
-    fun nifty(): String
-}
-
-private fun extraCool() = Cool { "Apple" }
-
-private fun defaultCool() = Cool { "Banana" }
