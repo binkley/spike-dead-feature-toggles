@@ -9,10 +9,10 @@ class Foo(featureA: String) {
     fun nifty() = cool.nifty()
 }
 
-private fun interface Cool {
+fun interface Cool {
     fun nifty(): String
 }
 
-private fun coolA() = Cool { "Apple" }
+fun coolA() = Cool { "Apple" }
 
-private fun coolB() = Cool { "Banana" }
+fun coolB() = Cool { "Banana" }

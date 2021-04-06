@@ -9,9 +9,4 @@ internal class FooTest {
     fun `should have feature A`() {
         assertEquals("Apple", Foo("A").nifty())
     }
-
-    @Test
-    fun `should not have feature B`() {
-        assertEquals("Banana", Foo("B").nifty())
-    }
 }
