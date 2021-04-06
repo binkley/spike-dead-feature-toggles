@@ -30,6 +30,17 @@ This fails tests.
 $ ./mvnw clean verify -Dtoggles=
 ```
 
+## Toggles
+
+Feature toggles intentionally create dead code. In typical development,
+features accumulate over time, and few are removed. However, when needing
+removal it is difficult to find all impacted code without coverage. Good luck.
+
+Perhaps more important is to _remove toggles_ for code that becomes permanent.
+In this spike, you can disable a toggle from the command line during build,
+and see tests fail. Remove the toggle from the production code, and see the
+test pass again.
+
 ## Coverage
 
 ### Example 1 &mdash; full coverage
@@ -61,13 +72,16 @@ typical example is `main()`  In the JVM world, JaCoCo is the coverage tool of
 choice, and it understands the `@lombok.Generated` annotation to mean: ignore
 this code for coverage. Use this power **sparingly**.
 
-## Toggles
+<img src="images/jacoco-report.png" alt="JaCoCo coverage report"
+align="right"/>
 
-Feature toggles intentionally create dead code. In typical development,
-features accumulate over time, and few are removed. However, when needing
-removal it is difficult to find all impacted code without coverage. Good luck.
+### Reading the coverage report
 
-Perhaps more important is to _remove toggles_ for code that becomes 
-permanent.  In this spike, you can disable a toggle from the command line 
-during build, and see tests fail.  Remove the toggle from the production 
-code, and see the test pass again.
+Four things to observe:
+
+1. The function `nifty()` has uncovered branches. This is because of the
+   toggle, and is expected
+2. The function `extraCool()` is fully covered. This is the toggle in action.
+3. The function `defaultCool()` is uncovered. This is the toggle in action.
+4. The function `notCool()` does not show coverage. This is `@Generated`
+   in action
